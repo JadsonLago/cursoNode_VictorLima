@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/JadsonLago/cursoNode_VictorLima/issues"
   },
-  "homepage": "https://github.com/JadsonLago/cursoNode_VictorLima#readme"
+  "homepage": "https://github.com/JadsonLago/cursoNode_VictorLima#readme",
+  "dependencies": {
+    "express-handlebars": "^7.1.2"
+  }
 }

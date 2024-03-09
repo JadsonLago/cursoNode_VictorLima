@@ -1,19 +1,23 @@
 const express = require('express');
 const app = express();
+const handlebars = require('express-handlebars')
+const { Sequelize } = require('sequelize');
 
-//criando rotas
+// Config    
+    // Template engine
+        app.engine('handlebars', handlebars({defaultLayout:'main'}))
+        app.set('view engine','handlebars')
+    // Conexão MySQL
 
-app.get('/', function (req, res) {
-    res.send('Seja bem vindo ao app')
+        const sequelize = new Sequelize('teste', 'root', 'root', {
+            host: 'localhost',
+            dialect: 'mysql'
+        });
+
+// Rotas
+app.get('cad/', function (req, res) {
+    res.send('Seja Rota de cadatro de POSTS')
 });
-
-app.get('/sobre', function (req, res) {
-    res.send('Minha Página Sobre')
-});
-
-app.get('/blog', function (req, res) {
-    res.send('Bem vindo ao Blog')
-})
 
 
 
